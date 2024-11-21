@@ -98,7 +98,7 @@ void Book::bookgen_from_file(std::string filename) {
     out << "static std::unordered_map<uint64, int> book_data{" << std::endl;
     for (auto it = filtered_book.cbegin(); it != filtered_book.cend(); ++it) {
         out << boost::format("{0x%08X, %d}") % it->first % it->second;
-        if (boost::next(it) != filtered_book.cend()) {
+        if (std::next(it) != filtered_book.cend()) {
             out << "," << std::endl;
         }
     }

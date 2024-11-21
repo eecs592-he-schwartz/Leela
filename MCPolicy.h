@@ -3,6 +3,7 @@
 
 #include "config.h"
 
+#include <string>
 #include <assert.h>
 #include <array>
 #include <vector>
