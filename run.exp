@@ -1,0 +1,8 @@
+spawn leela --gtp --threads 8 --noponder
+send "boardsize 19\r"
+expect "=" # wait for ack
+send "komi 6.5\r"
+expect "=" # wait for ack
+send "time_settings 0 11 1\r"
+expect "=" # wait for ack
+interact
